@@ -1,0 +1,375 @@
+/*  Estilos padrões */
+
+html {
+  --orange-1: #eed6be;
+  --blue-1: #44a9fc;
+  --blue-2: #3399ee;
+}
+
+/*  container */
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.25rem 0;
+  background: linear-gradient(135deg, var(--blue-1), var(--blue-2));
+  z-index: 100;
+  box-shadow: 0 2px 2px rgba(221, 6, 6, 0.144);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Centraliza os itens no menu em dispositivos menores */
+.header ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.header li + li {
+  margin-left: 2rem;
+}
+
+.header li a {
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+  font-size: 1rem;
+  line-height: 1;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  padding: 5px 0;
+  transition: 0.1s ease-out;
+}
+
+.header-container img {
+  margin-left: 1rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.header li a:hover,
+.header li a.ativo {
+  border-bottom: 2px solid black;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center; /* Centraliza a logo e o menu */
+  }
+
+  .header ul {
+    flex-direction: column;
+    text-align: center; /* Centraliza os links do menu */
+  }
+
+  .header li + li {
+    margin-left: 0;
+    margin-top: 1rem; /* Espaçamento entre itens no menu */
+  }
+
+  .header-container img {
+    margin-left: 0;
+    margin-bottom: 1rem; /* Espaçamento abaixo da logo */
+  }
+}
+
+/*  main */
+
+.main {
+  box-sizing: border-box;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
+  background-color: #ffa500;
+  color: black; /* Texto preto */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.main .container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main .container img {
+  border-radius: 50%; /* Deixa a imagem circular */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.main .container h1 {
+  font-size: 28px;
+  margin: 10px 0;
+  color: black; /* Cor do texto */
+}
+
+.main .container p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.main ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  padding: 5px 0;
+  transition: 0.1s ease-out;
+}
+
+.main ul li {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main .abordagem h2 {
+  font-size: 22px;
+  margin: 20px 0;
+  color: black;
+  text-align: center;
+}
+
+.main .sobre-mim h2 {
+  font-size: 22px;
+  color: black;
+  margin: 20px 0;
+}
+
+.main .sobre-mim p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: black;
+}
+
+/* Estilos para a seção de agendamento e redes sociais */
+
+.agendamento {
+  width: 100%;
+  padding: 40px;
+  background: linear-gradient(135deg, var(--blue-1), var(--blue-2));
+  color: black;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0, 2rem auto;
+  box-sizing: border-box;
+}
+
+.agendamento h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25d366; /* Verde WhatsApp */
+  color: rgb(2, 1, 1);
+  padding: 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+.btn-whatsapp img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Estilos para redes sociais */
+.container-redes-sociais {
+  margin-top: 40px;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons li {
+  display: inline-block;
+}
+
+.social-icons li a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons li a img:hover {
+  transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+}
+
+/*  Responsivel media que  */
+
+/* Estilos para telas menores, como smartphones (largura máxima de 600px) */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Ajusta a imagem e o texto no header */
+  .header-container img {
+    width: 50px; /* Menor para telas pequenas */
+    height: 50px;
+  }
+
+  .header li a {
+    font-size: 0.8rem; /* Texto menor */
+  }
+
+  .main .container img {
+    width: 100px; /* Reduz tamanho da imagem no mobile */
+    height: 100px;
+  }
+
+  .main ul li {
+    width: 100%; /* Ajusta a largura dos itens da lista para ocupar toda a tela */
+  }
+
+  .main .abordagem h2,
+  .main .sobre-mim h2 {
+    font-size: 18px; /* Tamanho de fonte menor */
+  }
+
+  .main .sobre-mim p {
+    font-size: 16px;
+  }
+
+  .btn-whatsapp {
+    font-size: 16px;
+  }
+
+  .btn-whatsapp img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .social-icons li a img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Estilos para tablets (largura máxima de 900px) */
+@media (max-width: 900px) {
+  .header-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header li a {
+    font-size: 0.9rem;
+  }
+
+  .main .container img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .main ul li {
+    width: 45%; /* Ajusta largura para caber dois itens por linha */
+  }
+
+  .main .abordagem h2,
+  .main .sobre-mim h2 {
+    font-size: 20px;
+  }
+
+  .main .sobre-mim p {
+    font-size: 17px;
+  }
+
+  .btn-whatsapp {
+    font-size: 17px;
+  }
+
+  .btn-whatsapp img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social-icons li a img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Estilos para telas maiores, como desktops (largura mínima de 1200px) */
+@media (min-width: 1200px) {
+  .main {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .main .container img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .main ul li {
+    width: 22%;
+  }
+
+  .main .abordagem h2,
+  .main .sobre-mim h2 {
+    font-size: 26px;
+  }
+
+  .main .sobre-mim p {
+    font-size: 20px;
+  }
+
+  .btn-whatsapp {
+    font-size: 20px;
+  }
+
+  .btn-whatsapp img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-icons li a img {
+    width: 45px;
+    height: 45px;
+  }
+}
