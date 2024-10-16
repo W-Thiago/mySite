@@ -6,8 +6,6 @@ html {
   --blue-2: #3399ee;
 }
 
-/*  container */
-
 /* Container */
 .container {
   max-width: 1200px;
@@ -94,16 +92,23 @@ html {
 /*  main */
 
 .main {
+  padding-top: 100px; /* Adiciona espaço extra abaixo do header */
   box-sizing: border-box;
-  padding-top: 1rem;
   padding-bottom: 2rem;
   margin-top: 100px;
   width: 100%;
   text-align: center;
   background-color: #ffa500;
-  color: black; /* Texto preto */
+  color: black;
   border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  /* Se o header for mais alto em telas menores, ajusta o padding-top */
+  .main {
+    padding-top: 150px; /* Aumenta o espaçamento para telas menores */
+  }
 }
 
 .main .container {
